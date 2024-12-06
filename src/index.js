@@ -6,7 +6,7 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <React.StrictMode future={{ v7_startTransition: true , v7_relativeSplatPath: true}}>
     <App />
   </React.StrictMode>
 );

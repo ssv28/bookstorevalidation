@@ -45,52 +45,54 @@ function Signup() {
         navigate('/login');
     };
 
-    
+
 
 
     return (
-        <div>
-            <h1>Signup</h1>
-            <Formik
-                initialValues={{
-                    firstName: '',
-                    lastName: '',
-                    email: '',
-                    password: ''
-                }}
-                validationSchema={SignupSchema}
+        <div style={{display:"flex", justifyContent:"center",paddingTop:"100px"}}>
+            <div style={{ border: "5px solid #000", borderRadius: "20px", width: "22%", padding: "30px" }}>
+
+                <h1 style={{ textAlign: "center" }}>Signup</h1>
+                <Formik
+                    initialValues={{
+                        firstName: '',
+                        lastName: '',
+                        email: '',
+                        password: ''
+                    }}
+                    validationSchema={SignupSchema}
 
 
-                onSubmit={signupDate}
+                    onSubmit={signupDate}
 
 
-            >
-                <Form>
-                    <label htmlFor="firstName">First Name : </label>
-                    <Field name="firstName" />
-                    <ErrorMessage name="firstName" component="div" style={{ color: "red" }} /> <br></br>
+                >
+                    <Form>
+                        <label htmlFor="firstName">First Name : </label>
+                        <Field name="firstName" />
+                        <ErrorMessage name="firstName" component="div" style={{ color: "red" }} /> <br></br>
 
-                    <label htmlFor="lastName">Last Name : </label>
-                    <Field name="lastName" />
-                    <ErrorMessage name="lastName" component="div" style={{ color: "red" }} /><br></br>
+                        <label htmlFor="lastName">Last Name : </label>
+                        <Field name="lastName" />
+                        <ErrorMessage name="lastName" component="div" style={{ color: "red" }} /><br></br>
 
-                    <label htmlFor="email">Email Id : </label>
-                    <Field name="email" type="email" />
-                    <ErrorMessage name="email" component="div" style={{ color: "red" }} /><br></br>
+                        <label htmlFor="email">Email Id : </label>
+                        <Field name="email" type="email" />
+                        <ErrorMessage name="email" component="div" style={{ color: "red" }} /><br></br>
 
-                    <label htmlFor="password">Password : </label>
-                    <Field name="password" type="password" />
-                    <ErrorMessage name="password" component="div" style={{ color: "red" }} /><br></br><br></br>
+                        <label htmlFor="password">Password : </label>
+                        <Field name="password" type="password" />
+                        <ErrorMessage name="password" component="div" style={{ color: "red" }} /><br></br><br></br>
 
-                   <Button variant="contained" type='submit'>SIGNUP</Button>
+                        <Button variant="contained" type='submit'>SIGNUP</Button>
 
-                </Form>
+                    </Form>
 
-            </Formik>
+                </Formik>
 
-            <h2>Register User</h2>
+                {/* <h2>Register User</h2>
 
-            <table border="1" style={{ width: "100%", marginTop: "20px" }}>
+            <table border="1" style={{ width: "50%", marginTop: "20px" }}>
 
                 <tr>
                     <th>First Name</th>
@@ -111,8 +113,9 @@ function Signup() {
                     ))
                 }
 
-            </table>
+            </table> */}
 
+            </div>
         </div>
     );
 }
